@@ -1,4 +1,7 @@
 # bot.py
+import os
+if not os.path.exists('images'):
+    os.makedirs('images')
 import json
 import random
 import asyncio
@@ -421,4 +424,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
